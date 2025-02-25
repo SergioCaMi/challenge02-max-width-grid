@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             padding: 0;
             background-color: #f8f8f8;
         }
+
         .grid-container {
             height: 100vh;
             background-color: #fff;
@@ -17,6 +19,7 @@
             max-width: 1650px;
             padding: 20px;
         }
+
         .news-item {
             border: 1px solid #d5d5d5;
             padding: 20px;
@@ -24,6 +27,7 @@
             text-align: center;
             background-color: #fff;
         }
+
         .news-item img {
             width: 100%;
             height: 150px;
@@ -31,7 +35,7 @@
             border-radius: 5px;
         }
 
-        .news-item--important  {
+        .news-item--important {
             border: 2px solid black;
             background-color: rgb(101, 192, 101);
         }
@@ -44,53 +48,87 @@
         @media (min-width: 500px) {
             .grid-container {
                 display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         /* Ejercicio 2: CREA una media query para que el contenoido se distribuya tal y como se espera en el diseño. Tienes que hacer que item ".news-item--important" se expanda dos columnas. Además, queremos que todo el contenedor del grid tenga como mucho 900px de ancho */
-     
+
+
+        @media (min-width: 900px) {
+            .grid-container {
+                max-width: 900px;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .news-item--important {
+                grid-column: span 2;
+            }
+
+
+        }
+
+
+
+        /* 
         
- 
+        1. Usa adecuadamente las propiedades grid-template-columns, gap, y grid-column y max-width para conseguir el resultado final esperado
+
+        2. En principio solo deberías completar las reglas CSS entre las etiquetas <style>
+
+        */
     </style>
 </head>
+
 <body>
     <div class="grid-container">
         <div class="news-item news-item--important">
             <img src="https://picsum.photos/id/0/5000/3333" alt="News Image">
             <p>Noticia IMPORTANTE</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
         </div>
         <div class="news-item">
             <img src="https://picsum.photos/id/1/5000/3333" alt="News Image">
             <p>Noticia 2</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
 
         </div>
         <div class="news-item">
             <img src="https://picsum.photos/id/2/5000/3333" alt="News Image">
             <p>Noticia 3</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
         </div>
         <div class="news-item">
             <img src="https://picsum.photos/id/3/5000/3333" alt="News Image">
             <p>Noticia4 4</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
         </div>
         <div class="news-item">
             <img src="https://picsum.photos/id/4/5000/3333" alt="News Image">
             <p>Noticia 5</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
         </div>
         <div class="news-item">
             <img src="https://picsum.photos/id/5/5000/3333" alt="News Image">
             <p>Noticia 6</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
         </div>
         <div class="news-item">
             <img src="https://picsum.photos/id/6/5000/3333" alt="News Image">
             <p>Noticia 7</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut voluptatibus laudantium enim dicta
+                at nulla ducimus earum eveniet alias id nemo tempora, illum nam fugiat distinctio vel esse et?</p>
         </div>
     </div>
 </body>
+
 </html>
